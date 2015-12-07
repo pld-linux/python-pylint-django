@@ -9,7 +9,7 @@ Summary:	Pylint plugin for hangling Django code
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.7.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/p/pylint-django/%{module}-%{version}.tar.gz
@@ -20,10 +20,12 @@ BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
+%{?with_tests:BuildRequires:	python-pylint-plugin-utils}
 %endif
 %if %{with python3}
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools
+%{?with_tests:BuildRequires:	python3-pylint-plugin-utils}
 %endif
 Requires:	python-modules
 BuildArch:	noarch
