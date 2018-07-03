@@ -9,7 +9,7 @@ Summary:	Pylint plugin for hangling Django code
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.7.1
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/p/pylint-django/%{module}-%{version}.tar.gz
